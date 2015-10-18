@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'celtic_garamond_the_2ndRg';
+    src: url('../fonts/celtg___-webfont.eot');
+    src: url('../fonts/celtg___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/celtg___-webfont.woff2') format('woff2'),
+         url('../fonts/celtg___-webfont.woff') format('woff'),
+         url('../fonts/celtg___-webfont.ttf') format('truetype'),
+         url('../fonts/celtg___-webfont.svg#celtic_garamond_the_2ndRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'glamorregular';
+    src: url('../fonts/glamor-regular-webfont.eot');
+    src: url('../fonts/glamor-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/glamor-regular-webfont.woff2') format('woff2'),
+         url('../fonts/glamor-regular-webfont.woff') format('woff'),
+         url('../fonts/glamor-regular-webfont.ttf') format('truetype'),
+         url('../fonts/glamor-regular-webfont.svg#glamorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'groundayregular';
+    src: url('../fonts/grounday-webfont.eot');
+    src: url('../fonts/grounday-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/grounday-webfont.woff2') format('woff2'),
+         url('../fonts/grounday-webfont.woff') format('woff'),
+         url('../fonts/grounday-webfont.ttf') format('truetype'),
+         url('../fonts/grounday-webfont.svg#groundayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sherwoodregular';
+    src: url('../fonts/sherwood-webfont.eot');
+    src: url('../fonts/sherwood-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sherwood-webfont.woff2') format('woff2'),
+         url('../fonts/sherwood-webfont.woff') format('woff'),
+         url('../fonts/sherwood-webfont.ttf') format('truetype'),
+         url('../fonts/sherwood-webfont.svg#sherwoodregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sofia_roughblack_three';
+    src: url('../fonts/sofiaroughblathree-webfont.eot');
+    src: url('../fonts/sofiaroughblathree-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sofiaroughblathree-webfont.woff2') format('woff2'),
+         url('../fonts/sofiaroughblathree-webfont.woff') format('woff'),
+         url('../fonts/sofiaroughblathree-webfont.ttf') format('truetype'),
+         url('../fonts/sofiaroughblathree-webfont.svg#sofia_roughblack_three') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sucker_fontregular';
+    src: url('../fonts/sucker_font_2013_juan_casco-webfont.eot');
+    src: url('../fonts/sucker_font_2013_juan_casco-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sucker_font_2013_juan_casco-webfont.woff2') format('woff2'),
+         url('../fonts/sucker_font_2013_juan_casco-webfont.woff') format('woff'),
+         url('../fonts/sucker_font_2013_juan_casco-webfont.ttf') format('truetype'),
+         url('../fonts/sucker_font_2013_juan_casco-webfont.svg#sucker_fontregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*** Fonts ****/
+.celtic {font-family: 'celtic_garamond_the_2ndRg';}
+.glamor {font-family: 'glamorregular'; }
+.grounday {font-family: 'groundayregular'; }
+.sherwood {font-family: 'sherwoodregular'; }
+.sofia {font-family: 'sofia_roughblack_three'; }
+.sucker {font-family: 'sucker_fontregular'; }

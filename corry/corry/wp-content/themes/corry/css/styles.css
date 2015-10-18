@@ -1,0 +1,583 @@
+html {    overflow-x:hidden;}
+body {
+    width: 100%;
+    overflow-x:hidden;
+    background-color: #000;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+section {
+    min-height: 100vh; 
+    border-bottom: solid #cc9900 5px;
+}
+
+p {
+    margin: 0px 0px 30px;
+    font-size: 1em;
+    color: #fff;
+
+}
+a {color: #fff;}
+a:hover, a:active {
+    color:#cc9900;
+    transition:.2s all ease-in;
+}
+
+h1 {font-size: 4em; margin-top: 0;}
+h2 {font-size:2.75em;font-weight:700;}
+h3 {font-size:2em;}
+h4 {font-size:2em;}
+
+table {text-align: left; width: 100%;}
+
+/*** Text ***/
+.headline {text-align: center;}
+.uppercase {text-transform:uppercase;}
+.brown {color: #60513b;}
+.brown-bg {background-color: #60513b;}
+.white {color: #ffffff;}
+.yellow {color: #cc9900;}
+.yellow-bg {background-color: #cc9900;}
+
+/*** Mobile/Desktop ***/
+.mobile {display: none;}
+.mobile .social {margin-top: 15px; padding-left: 25px;}
+.desktop {display: block;}
+
+/*** Social Sprites ***/
+.sprite { background: url('../images/social-sprites.png') no-repeat top left; width: 35px; height: 35px;  } 
+.sprite.facebook1 { background-position: 0 0; } 
+.sprite.instagram1 { background-position: -75px 0; width: 45px; } 
+.sprite.facebook2 { background-position: -40px 0; } 
+.sprite.instagram2 { background-position: -120px 0; width: 68px; } 
+
+/*** Toggle Styles ***/
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-image: url("../images/nav-bg.jpg");
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    overflow-x:hidden;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+.content-area, .site-main {
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding:15px ;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+/*** top menu ***/
+.logo {
+    max-width: 150px;
+    margin:7px auto;
+}
+
+.primary {
+  display: inline-block;
+  float: none;
+  margin: 10px 0px 0px -30px;
+}
+
+.secondary {
+  display: inline-block;
+  float: left;
+  margin: 10px 0px 0px -30px;
+}
+
+#menu-food li {
+    display: inline;
+    margin-right: 10px;
+    margin-bottom: 6px;
+    list-style-type:none;
+    font-family: 'celtic_garamond_the_2ndRg';
+    font-size: .8em;
+    text-transform:uppercase;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+ul#menu-top-nav.menu, ul#menu-footer-nav {
+    margin: 0 auto;
+    max-width: 250px;
+}
+
+#menu-top-nav li, #menu-top-nav-1 li, #menu-footer-nav li {
+    margin-bottom: 6px;
+    list-style-type:none;
+    color:#fff;
+    font-family: 'celtic_garamond_the_2ndRg';
+    font-size: 1em;
+    text-transform:uppercase;
+}
+
+#menu-top-nav li a, #menu-top-nav-1 li a, #menu-footer-nav li a, #menu-food li a{
+    color:#fff;
+    text-decoration: none;
+}
+
+#menu-top-nav li a:hover, #menu-top-nav-1 li a:hover, #menu-footer-nav li a:hover, #menu-food li a:hover {
+    color:#cc9900;
+    transition:.2s all ease-in;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0px;
+    margin: 2px 0px 0px;
+    font-size: 14px;
+    text-align: left;
+    list-style: outside none none;
+    background-color: #fbf7f6;
+    background-clip: padding-box;
+    border: 0px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
+}
+
+.dropdown-menu > li {
+    width: 100%;
+}
+
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+    background-color: #fff;
+    background-image: none;
+    background-repeat: repeat-x;
+    text-decoration: underline !important; 
+    width: 100%;
+}
+
+/*** Responsive menu ***/
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 3px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 0px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+  }
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 34px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+/*no-repeat fixed center*/
+.navbar-inverse {
+    background: transparent;
+    background-color:transparent;
+    border-width: 0px;
+    height:66px;
+}
+
+
+.header-img { 
+    background-size: cover; 
+    background-position: top center;
+    min-height: 90vh;
+}
+
+/*** Sections ***/
+#section1 a , #section2 a , #section3 a , #section4 a , #section5 a {font-size: 1.5em}
+#section1 {min-height: 750px;}
+#section1 h1{
+    font-size: 6em;
+    line-height: 50px;
+    text-shadow:2px 5px 5px rgba(0,0,0,.5);
+}
+#section1 h2 {
+    /*line-height: 30px;*/
+    text-shadow:2px 5px 5px rgba(0,0,0,.5);
+}
+#section1 h3 {
+    line-height: 0px;
+    text-shadow:2px 5px 5px rgba(0,0,0,.5);
+}
+
+#section2 .cead-content{margin-top: 15%; padding-right: 40px;} 
+#section2 h2 {font-size:6em;margin-top: 5px;}
+#section2 img { margin: 0 auto;}
+#section2 .fleur {max-width: 100px;}
+#section2 .separator {max-width: 50%;margin-bottom: 20px;}
+
+#section3 h2 {font-size: 4em;}
+#section3 .headline {font-size: 1.5em;}
+#section3 img { margin: 0 auto;}
+#section3 .separator {max-width: 50%;margin-bottom: 20px;}
+
+#section4 h2 {font-size: 6em;text-shadow:2px 5px 5px rgba(0,0,0,.5);}
+#section4 .headline {font-size: 1.5em;}
+#section4 img { margin: 0 auto;}
+#section4 .fleur {max-width: 250px;margin-bottom: 20px;}
+
+#section5 .beer-content{margin-top: 10%; padding: 25px;}
+#section5 h2{ font-size:6em; color: #fff; margin-top: 0px;}
+#section5 p {color: #fff;}
+#section5 img { margin: 0 auto;}
+#section5 .cap {max-width: 100px;}
+#section5 .fleur {max-width: 150px;}
+
+#post h1 {
+    margin-top: 0px;
+    padding: 0px 0;
+    text-shadow:2px 5px 5px rgba(0,0,0,.5);
+}
+
+
+/*** Page Styles ***/
+.scroll-bg {
+    min-height: 730px;
+    max-height: 95vh;
+    padding-top: 15px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    background: transparent;
+}
+
+.wood-bg {
+    background: #60513b url('../images/woodgrain2-bg.jpg');
+    background-repeat: repeat;
+    background-position: top;
+    overflow-y: scroll;
+    overflow-x:hidden;
+}
+.wood-bg img {margin: 0 auto;}
+
+
+/*** Page About ***/
+.about-headline {
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+.about-headline img {margin: 0 auto;}
+.about-headline .fleur {max-width: 100px;}
+.about-headline .separator {max-width: 50%;margin-bottom: 20px;}
+
+/*** Page Beer ***/
+.beer-header-img {
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+    background-position: top left;
+    min-height: 100vh;
+    background-size: 100% 100vh;
+}
+.beer-header {padding: 0;}
+.headline h1 {font-size: 4em; margin-top: 0;}
+.beer-bg {
+    background: #60513b url('../images/woodgrain2-bg.jpg');
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    padding-top: 15px;
+    overflow-y: scroll;
+}
+.beer-bg img {margin: 0 auto;}
+.beer-bg .fleur {max-width: 150px;}
+
+/*** Page Menu ***/
+.food-header-img { 
+    background-repeat: no-repeat; 
+    background-position: -50px 0px; 
+    min-height: 748px; 
+    height: 100vh; 
+    background-size: cover; }
+/*    
+.food-header-img {
+    background-repeat: no-repeat;
+    background-position: top left;
+    min-height: 754px;
+    height: 100vh;
+    background-size: 100% 100%;
+}
+*/o
+/*** Page Whiskey ***/
+#whiskey-page { border-bottom: solid #cc9900 5px;}
+#whiskey-page h1, #whiskey-page h2, #whiskey-page h3 {margin: 0 auto;}
+#whiskey-page h1 {font-size: 7em; line-height: .7em;}
+#whiskey-page h3 {font-size: 1.5em;}
+#whiskey-page img {margin: 10px auto;}
+#whiskey-page .separator {max-width: 100px;}
+.whiskey-header-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    min-height: 100vh;
+}
+.whiskey-bg {background-color:rgba(96, 81, 59, 0.5); padding-top: 15px; min-height: 100vh;}
+
+
+/*** Press Page ***/
+#yelpwidget {margin-left: 10%;}
+#CDSWIDSSP { width: 100% !important;}
+#CDSWIDEXC {margin: 15px auto !important}
+
+/*** Contact Page ***/
+.contact-header-img {
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+    background-position: top left;
+    min-height: 100vh;
+    background-size: 100% 100%;
+}
+.contact-bg {
+    background: #60513b url('../images/woodgrain2-bg.jpg');
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    padding-top: 15px;
+    overflow-y: scroll;
+}
+.contact-bg img {margin: 0 auto;}
+.contact-bg .fleur {max-width: 150px;}
+
+/*** Page Menu ***/
+#menu-page h4 {font-size:1.25em; margin-bottom: 0px;}
+#wings, #tacos  {border: solid #cc9900 5px;}
+
+
+.gallery-header-img { 
+    margin:0 auto;
+    padding: 15px;
+    background-size: cover; 
+    background-position: top center; 
+    max-height: 100vh; 
+    overflow: scroll; }
+
+/*** Parallax Styles ***/
+.home-content {
+    margin-top: 10%;
+}
+.parallax {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home-restaurant {
+    background-image: url("../images/1-irish-restaurant.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.cead-mile-failte {
+    background-image: url("../images/building-front.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.whiskey {
+    background-image: url("../images/barrels.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.pub-food {
+    background-image: url("../images/pub-food.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.slainte{
+    background-image: url("../images/guiness.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/*** RS Forms ***/
+.hp-wrap {display: none;}
+
+.form-control {
+    margin: 10px 0px;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.btn-yellow {
+    width: 100%;
+    color: #fff;
+    background-color: #C90;
+    border-color: #CCC;
+    padding: 10px 50px;
+    font-size: 1.5em;
+}
+
+
+/*** Beer IFrame ***/
+iframe {
+    width: 100%;
+    min-height: 900px;
+}
+
+
+/*** Media Queries ***/
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 0px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (min-width : 320px) and (max-width : 736px) {
+    .navbar-collapse.in {overflow-y: visible;}
+    /*** Mobile/Desktop ***/
+    .mobile {display: block;}
+    .desktop {display: none;}
+
+    section, #section1{ min-height: 400px; border:0;}
+    h2 {font-size: 1.75em;}
+
+    .col-centered {padding: 0;}
+
+    .cead-mile-failte, .whiskey, .pub-food {background-size: auto 100%;}
+
+
+    #section1 h1, #section2 h2, #section2 h3, #section2 h4, #section2 h5 {font-size: 4em; line-height: normal;}
+    #section1 h1 {line-height: 50px;}
+    #section2 .cead-content {margin-top: 20%;}
+    #section3 h2, #section4 h2 {font-size: 3em;}
+    #section3 .headline {font-size: 1em;}
+    #section5 .beer-content {background-color:rgba(0, 0, 0, 0.75);}
+    #section5 h2 {font-size: 5em;}
+
+    .beer-bg {
+        background: #000 url('../images/woodgrain2-bg.jpg');
+        background-size: cover;
+        background-repeat: repeat-y;
+        background-position: top;
+        padding: 0;
+    }
+
+    .content-area, .site-main { padding: 10px;}
+    /*.beer-content {background-color:rgba(0, 0, 0, 0.75); width: 100%; padding: 0px;}   */
+    .beer-content {background-color: transparent; width: 100%; padding: 0px;}  
+    
+    .whiskey-bg {min-height: 100%;}
+
+    #sidebar-wrapper {
+        position: relative !important;
+        left: 0px;
+        right: 0;
+        width: 102%;
+        min-height: 270px;
+        margin-left: 0px;
+        background-image: url("../images/nav-bg-mobile.jpg");
+        overflow:hidden;
+        border-bottom: solid #cc9900 5px;
+    }
+
+    .primary {
+        position: relative;
+        top: 0px;
+        left: 0;
+        margin: 0px;
+        padding: 15px 0;
+        display: inline-block;
+        background: #000 none repeat scroll 0% 0%;
+        z-index: 9999;
+    }
+    .navbar .navbar-collapse { text-align: center;}
+
+    #menu-top-nav li, #menu-footer-nav li {
+        float: none;
+        display: inline-block;
+        font-size: 1.65em;
+        margin: 5px 10px;
+    }
+}

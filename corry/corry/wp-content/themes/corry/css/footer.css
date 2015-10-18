@@ -1,0 +1,11 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+.footer {
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 200px;
+  background-color: #222222;
+}
+
+
